@@ -255,6 +255,27 @@
       // Show the thank you message instantly
       document.getElementById('thankYouMessage').classList.remove('hidden');
       this.classList.add('hidden'); // Hide the form
+    
+      // Disable submit button to avoid multiple clicks
+      const submitButton = this.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+
+      // Prepare form data to send to the server (Google Apps Script)
+      const formData = new FormData(this);
+      const actionUrl = 'https://script.google.com/macros/s/AKfycbwaHNQcOsedGFA9NUdzIrkN9p9q0eFx5cYEOowACA_YGt3loPsA9K3UnkNlXJhSepDdiA/exec';  // Replace with your script URL
+
+      // Send form data via POST request
+      fetch(actionUrl, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        console.log(data); // Logs "Success" if saved successfully
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
     });
   </script>
 </body>
