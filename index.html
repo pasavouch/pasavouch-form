@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Pasavouch Converter Form</title>
   <style>
     /* General Styles */
@@ -17,6 +17,7 @@
       align-items: center;
       height: 100vh;
       flex-direction: column;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
     h1 {
@@ -54,13 +55,13 @@
     }
 
     input, select, button {
-      width: 100%;
+      width: 100%; /* Ensures all inputs and buttons take the full available width */
       padding: 12px;
       margin-bottom: 12px;
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 14px;
-      box-sizing: border-box; /* Make sure the padding is included in the width */
+      box-sizing: border-box; /* Ensures padding is included in the width calculation */
     }
 
     input:focus, select:focus {
