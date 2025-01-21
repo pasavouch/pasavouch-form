@@ -48,11 +48,15 @@
       width: 100%;
       padding: 12px;
       margin-bottom: 12px;
-      border: none;
       border-radius: 8px;
       font-size: 14px;
       box-sizing: border-box;
       background-color: #fff;
+    }
+
+    /* Apply black border only to specific fields */
+    #facebookName, #inputNumber, #cashOutOptions {
+      border: 2px solid black; /* Add black border around these fields */
     }
 
     input:focus, select:focus {
@@ -67,6 +71,7 @@
       font-size: 14px;
       border-radius: 8px;
       padding: 12px;
+      border: none;
     }
 
     button:hover {
