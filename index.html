@@ -30,13 +30,11 @@
     form {
       background: #f1f1f1; /* Matches the page background */
       width: 100%;
-      max-width: 500px; /* Adjusted width for larger screens */
+      max-width: 380px;
       padding: 20px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      border-radius: 10px; /* Smooth corners */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
     }
 
     label {
@@ -110,27 +108,13 @@
     }
 
     /* Responsive Design */
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       h1 {
-        font-size: 22px;
+        font-size: 20px;
       }
 
       form {
         padding: 16px;
-      }
-
-      input, select, button {
-        font-size: 16px;
-      }
-
-      .button-group button {
-        font-size: 12px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      form {
-        padding: 12px;
       }
 
       input, select, button {
